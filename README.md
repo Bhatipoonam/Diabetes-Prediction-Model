@@ -1,5 +1,43 @@
-# Diabetes-Prediction-Model
-Diabetes prediction models leveraging machine learning are revolutionizing early detection and management.
+# Diabetes Prediction Model Using SVM
+
+## Overview
+
+This repository contains a Python implementation of a diabetes prediction model using the Support Vector Machine (SVM) algorithm from the scikit-learn library. The model is trained on a diabetes dataset to predict whether a person has diabetes based on various health metrics.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Code Explanation](#code-explanation)
+- [Results](#results)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Installation
+
+To run this code, you need to have Python installed along with the following libraries:
+
+- `numpy`
+- `pandas`
+- `scikit-learn`
+- `PIL` (for image processing, if needed)
+
+You can install the required libraries using pip:
+
+```bash
+pip install numpy pandas scikit-learn pillow
+```
+
+## Usage
+
+1. Download the diabetes dataset (`diabetes.csv`) and place it in the specified directory.
+2. Run the Python script containing the code provided in this repository.
+3. The script will load the dataset, preprocess the data, train the SVM model, and print the accuracy of the model on both the training and testing sets.
+4. You can modify the `input_data` variable to test predictions for different health metrics.
+
+## Code Explanation
+
+```python
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -64,5 +102,21 @@ if prediction[0] == 1:
 else:
     print("This person does not have diabetes.")
 
-# Display the first five rows of the dataset
-print(diabetes.head(5))
+# Key Components:
+
+- Data Loading: The dataset is loaded using Pandas.
+- Data Preprocessing: The features are standardized using `StandardScaler`.
+- Model Training: The SVM model is trained on the training set.
+- Prediction: The model predicts diabetes status based on input health metrics.
+
+# Results
+
+After running the model, the script will output the accuracy of the model on both the training and testing datasets, along with a prediction for the example input data.
+
+## Contributing
+
+Contributions are welcome! If you have suggestions for improvements or additional features, feel free to fork the repository and submit a pull request.
+
+License
+
+This project is licensed under the MIT License. See the LICENSE file for more details.
